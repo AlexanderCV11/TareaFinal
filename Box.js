@@ -17,7 +17,7 @@ function Box({ id, description, url, stock, nombre}) {
             <Text>{nombre}</Text>
             <Button
                 color="#455a64"
-                title="Ver"
+                title="Jugar"
                 onPress={
                     () => navigation.navigate('Details', {
                         id: id,
@@ -35,7 +35,7 @@ function Box({ id, description, url, stock, nombre}) {
 const styles = StyleSheet.create({
     root: {
         width: '40%',
-        height: 300,
+        height: 200,
         alignItems: "center",
         backgroundColor: 'lightgray',
         borderWidth: 1,

@@ -7,13 +7,6 @@ function DetailScreen({route, navigation}) {
 
     navigation.setOptions({
         title: description,
-        headerRight: () => (
-            <Button
-            title = "Buy"
-            onPress={() => {}}
-            disabled={stock === 0}
-            />
-        ),
     });
     
     return (
@@ -22,26 +15,12 @@ function DetailScreen({route, navigation}) {
                 style={styles.tinyLogo}
                 source={{uri:url,}}
             />
-            <Text>Nombre: {description}</Text>
-            <Text>Descripcion: {nombre}</Text>
-            <Text>stock: {stock}</Text>
+            <Text>{description}</Text>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    containerButton: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center', 
-        backgroundColor: '#98ee99',
-
-        margin: 20,
-        padding: 5,
-
-        width: 300,
-        height: 100,
-    },
     tinyLogo: {
         width: 300,
         height: 300,
@@ -49,3 +28,4 @@ const styles = StyleSheet.create({
 })
 
 export default DetailScreen;
+

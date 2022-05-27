@@ -6,7 +6,7 @@ import tasks from './data/tasks';
 
 function MenuScreen() {
     return (
-        <View>
+        <View style={styles.mainContainer}>
             <ScrollView style={styles.scroll}>
             <View style={styles.root}>
                 {
@@ -31,16 +31,14 @@ function MenuScreen() {
 const styles = StyleSheet.create({
     root: {
         flex: 1,
-        backgroundColor: '#ccff90',
+        //backgroundColor: '#ccff90',
         flexDirection: 'row',
         flexWrap: 'wrap',
+    },
+    mainContainer: {
+      flex:1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#66bb6a'
     },
 
-    containerBox: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        
-    },
     scroll: {
         marginBottom: 50,
     }

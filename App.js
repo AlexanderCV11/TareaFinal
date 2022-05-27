@@ -10,6 +10,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeScreen from './HomeScreen';
 import DetailScreen from './DetailScreen';
 import MenuScreen from './MenuScreen';
+import stackGuessNumber from './stackGuessNumber';
 
 
 const Tab = createBottomTabNavigator();
@@ -20,7 +21,7 @@ function Root() {
   return (
     <Drawer.Navigator>
       <Drawer.Screen name="Home" component={HomeScreen}/>
-      <Drawer.Screen name="Tasks" component={MenuScreen} options={{title: "Tienda"}} />
+      <Drawer.Screen name="Tasks" component={MenuScreen} options={{title: "Juegos"}} />
     </Drawer.Navigator>
   );
 }
@@ -34,7 +35,8 @@ export default function App() {
           component={Root}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="Details" component={DetailScreen} options={{title: "Tarea"}} />
+        <Stack.Screen name="Details" component={DetailScreen} />
+        <Stack.Screen name="GuessNumber" component={stackGuessNumber} options={{title: "Tarea"}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
